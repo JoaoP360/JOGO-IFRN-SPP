@@ -6,7 +6,7 @@ func _ready() -> void:
 		_button.pressed.connect(_on_button_pressed.bind(_button))
 		
 func _on_button_pressed(button: button) -> void:
-	match _button.name:
+	match _button.name
 		"Play":
 			get_tree().change_scene_to_file("res://level.tscn")
 			
