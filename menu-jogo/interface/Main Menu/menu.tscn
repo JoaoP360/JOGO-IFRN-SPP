@@ -1,0 +1,138 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxab0fp6ejrn1"]
+
+[ext_resource type="Script" path="res://interface/Main Menu/menu.gd" id="1_mtbhy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ofmh4"]
+font_size = 45
+shadow_size = 4
+shadow_color = Color(0.01977, 0.0194, 0.02, 0)
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nahm"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mtbhy")
+
+[node name="Backgroung" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -31.5
+offset_right = 157.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "IFRN -  O JOGO"
+label_settings = SubResource("LabelSettings_ofmh4")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -126.0
+offset_right = 139.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="Play" type="Button" parent="ButtonContainer" groups=["Buttons"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.0334176, 0.028117, 0.0285681, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7nahm")
+text = "Jogar
+"
+flat = true
+
+[node name="Shadow" type="Label" parent="ButtonContainer/Play"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -20.5
+offset_right = 39.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(74, 43)
+theme_override_colors/font_color = Color(0, 0, 0, 0.941176)
+theme_override_font_sizes/font_size = 32
+text = "Jogar"
+
+[node name="Play2" type="Button" parent="ButtonContainer" groups=["Buttons"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.0334176, 0.028117, 0.0285681, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7nahm")
+text = "Opções
+"
+flat = true
+
+[node name="Shadow" type="Label" parent="ButtonContainer/Play2"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -20.5
+offset_right = 134.0
+offset_bottom = 24.5
+grow_vertical = 2
+pivot_offset = Vector2(74, 43)
+theme_override_colors/font_color = Color(0, 0, 0, 0.941176)
+theme_override_font_sizes/font_size = 32
+text = "Opções"
+
+[node name="Quit" type="Button" parent="ButtonContainer" groups=["Buttons"]]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.0334176, 0.028117, 0.0285681, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7nahm")
+text = "Sair"
+flat = true
+
+[node name="Shadow" type="Label" parent="ButtonContainer/Quit"]
+show_behind_parent = true
+layout_mode = 1
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 119.0
+offset_bottom = 51.0
+pivot_offset = Vector2(74, 43)
+theme_override_colors/font_color = Color(0, 0, 0, 0.941176)
+theme_override_font_sizes/font_size = 32
+text = "Sair"
